@@ -1,0 +1,227 @@
+%-----------PREAMBLE-------------------------------------------------------
+\documentclass[a4paper]{article}
+\usepackage{acro} % used for acronyms
+\usepackage{titling}
+\usepackage{abstract} % sets abstract title on left side
+\usepackage{booktabs} % used for table formating
+\usepackage{multirow} % table shit
+\usepackage{tabulary} % used for table formating
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{color, colortbl}
+\usepackage{graphicx,fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\usepackage[onehalfspacing]{setspace} % allows double spacing
+\usepackage[super,comma,sort&compress]{natbib}
+\usepackage[a4paper,margin=2.5cm, headheight=26pt,includeheadfoot]{geometry}
+\setlength{\absleftindent}{0pt} %sets abstract title on left side
+\setlength{\absrightindent}{0pt} %sets abstract title on left side
+
+\definecolor{Gray}{gray}{0.92}
+\definecolor{GGray}{gray}{0.8}
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@classz}
+  {\CT@row@color}
+  {\oldCT@column@color}
+  {}
+  {}
+\patchcmd{\@classz}
+  {\CT@column@color}
+  {\CT@row@color}
+  {}
+  {}
+\patchcmd{\@classz}
+  {\oldCT@column@color}
+  {\CT@column@color}
+  {}
+  {}
+\makeatother
+%-----------TITLE-------------------------------------------------------
+\rhead{McMaster BioMod Team}
+\lhead{\includegraphics[width=1cm]{LogoOnly.png}}
+\pagestyle{plain}
+\setlength{\droptitle}{-4em}
+\title{Using DNA Origami As A Protein Scaffold To \\ Enhance Metabolic Production \textit{In Vivo}}
+\preauthor{\vspace{-3ex}\begin{center}}
+\author{McMaster BioMod Team}
+\postauthor{\end{center}}
+\predate{}
+\date{}
+\postdate{}
+%\author{McMaster BioMod Team}
+%\date{\vspace{-7ex}}
+
+%-----------ACRONYMS-------------------------------------------------------
+\DeclareAcronym{tal}{short = TAL, long = transcription activator-like}
+\DeclareAcronym{afm}{short = AFM, long = Atomic Force Mircoscopy}
+\DeclareAcronym{dsd}{short = dsDNA, long = double-stranded DNA}
+\DeclareAcronym{ssd}{short = ssDNA, long = single-stranded DNA}
+\DeclareAcronym{ncrna}{short = ncRNA, long = non-coding RNA}
+\DeclareAcronym{eco}{short = \textit{E. coli}, long = \textit{Escherichia coli}}
+\DeclareAcronym{hivrt}{short = HIVRT, long = Human Immunodeficiency Virus  Reverse-Transcriptase}
+\DeclareAcronym{igem}{short = iGEM, long = International Genetically Engineered Machine}
+\DeclareAcronym{mlrt}{short = MLRT, long = Monomeric Murine Leukemia Reverse Transcriptase}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\begin{abstract}
+Self-assembling DNA nanostructures hold great promise in controlling the spatial organization and orientation of enzymatic complexes.
+However, their usage \textit{in vivo} has been limited by the harsh conditions needed for assembly.
+We propose a modular toolkit to allow both researchers and future \ac{igem} participants to easily build DNA nanostructures that can be decorated with proteins in a wide range of cells.
+Our proposed solution uses a novel  reverse-transcriptase based method to synthesize necessary \ac{dsd} in the cellular environment and then uses the sequence-specific recognition properties of \ac{tal} domains of  effector proteins to assemble them into complex 2D or 3D shapes.
+Proteins of interest could then be fused with the \ac{tal} domains to bring them into proximity of each other and control their spatial orientation.
+The proposed technology can be used to increase the efficiency of complex enzyme cascades or to create chimeric signalling pathways by linking signals to downstream messengers.
+The modular nature allows the toolkit to be easily integrated into any synthetic biology project and could drastically increase the efficiency of existing enzymatic pathways.
+\end{abstract}
+\section*{Introduction}
+\subsection*{DNA Nanostructures}
+In 2006, Paul Rothemund introduced a novel method to create “DNA origami” through directed folding of a long \ac{ssd} “scaffold” into arbitrary shapes using short \ac{ssd} segments as “staples”\cite{intro1}.
+This method revolutionized DNA nanotechnology by offering fine control over the creation of complex shapes.
+To date, various  groups have successfully applied modifications of this technique to create both 2D and 3D shapes, such as various icons, monoliths, and nanoflasks\cite{intro1,intro2,intro3,intro4}.
+These nanostructures have seemingly limitless utility in a variety of applications.
+As drug delivery vehicles, aptamer-gated DNA nano-robots loaded with antibody fragments can change their configuration to deliver cargo to specific target cells\cite{intro5}.
+As biosensors, DNA nanostructures have successfully provided readouts of enzymatic activity and pH\cite{intro6,intro7}.
+The functionalization of DNA nanostructures can be expanded even further through creating DNA-protein arrangements.
+\vspace{2 mm}
+\\
+Despite significant methodological advances, very few groups contend with the challenge of producing DNA nanostructures \textit{in vivo}, preferring to create and apply such structures extracellularly.
+Developing DNA origami, decorated with functional proteins/small molecules that can be produced within living organisms would expand the potential for DNA nanostructures to be applied in a wide range of biological applications as discussed below.
+\subsection*{\textit{In Vivo} DNA Nanostructures: Scaffolds as a Proof-of-Concept}
+As a proof-of-concept application, we will use our toolkit to create an \textit{in vivo} DNA nanostructure scaffold for enzymatic reactions.
+By spatially fixing enzymes relative to one another, cellular scaffolds increase the efficiency of signaling cascades and biosynthetic pathways by shuttling substrates, stabilizing reaction intermediates and reducing diffusion time\cite{intro8,intro9}.
+While \textit{ex vivo} methods for engineering synthetic scaffolds have been well developed, there is still a growing need to express them \textit{in vivo} to produce “cell-factories”\cite{tab7}.
+However, existing nanostructure strategies currently being researched contains innate flaws that lower their potential when expressed in living bacteria, as outlined in \autoref{tab:surc}.
+In brief, the main challenges currently faced by the \textit{in vivo} synthesis of engineered scaffolds are due to (1) instability of backbone structures and (2) unpredictability of scaffold structure upon expression \textit{in vitro}.
+Ideally, DNA nanostructures expressed\textit{in vivo} offer unique advantages that tackle both of these issues, as they are not only highly stable structures that maintain rigidity, but also modular in the possible shapes, which allows for optimized intermediate diffusion\cite{intro1}.
+\begin{table}[h!]
+    \centering
+    \begin{tabulary}{\linewidth}{l l}
+        \bottomrule
+        \textbf{Strategy} & \textbf{Challenges} \\
+        \midrule
+        \rowcolor{Gray}
+        Fusion Proteins With Linkers & Inconsistent expression and folding as number of enzymes increase\cite{tab1,tab2}\\
+        Protein Scaffolds & Inconsistent expression and folding as number of enzymes increase\cite{tab3,tab4,tab5,intro16}\\
+        \rowcolor{Gray}
+        \ac{ssd} & Unpredictable shape of scaffold due to lack of rigidity\cite{tab7,tab8}\\
+        Plasmid DNA & Supercoiling of plasmids reduce enzymatic function\cite{tab9,tab10}\\
+        \rowcolor{Gray}
+        RNA & Chemical and thermodynamic instability of RNA\cite{tab11,tab12}\\
+        \bottomrule
+    \end{tabulary}
+    \caption{Overview of the limitations of existing \textit{in vivo} scaffolding technologies.}
+    \label{tab:surc}
+\end{table}
+\\
+Current DNA nanostructure technology is based on Rothemund’s \textit{ex vivo} assembly method, which requires harsh salt solutions and high temperatures for assembly\cite{intro4}.
+Moreover, many groups chemically synthesize their DNA strands, which can come at a high cost for large-scale applications.
+Therefore, implementing DNA nanostructures that can be synthesized and self-assembled within living cells is a unique challenge in synthetic biology.
+At its core, our proposal is thus a modular \textit{in vivo} assembly method for DNA origami.
+We will adapt a reverse-transcription based technique to achieve rapid synthesis of DNA strands in \ac{eco} using a plasmid encoding the DNA origami subunit sequences\cite{intro5}.
+We then propose to use \ac{tal}-specific to the DNA sequences in these strands for two purposes (1) to hold these dsDNA strands together into a DNA nanostructure and (2) to create fusion proteins to enzymes or functional groups to allow the origami structure to serve as a scaffold.
+After assembly, the assembled DNA nanostructure is not limited to serving scaffolding purposes, and could be programmed to match existing DNA nanostructure biological applications such as creating molecular machines \cite{intro6,intro7}, DNA computation \cite{intro8}, and even switchable structures that resemble riboswitches\cite{intro9}.
+Critically, our system will be completely modular.
+This genetic circuit will be cloned in an easy expression system that allows future \ac{igem} teams and researchers to adapt the technology for their specific uses.
+\vspace{2 mm}
+\\
+The extensive utility of \textit{in vivo} DNA nanostructure assembly can be seen by the implications of creating DNA scaffolds.
+As proteins scaffolds act naturally as hubs to aggregate signals and then activating specific downstream pathways, a scaffold could be used to alter responses to signalling inducers in a similar manner to how promoters could react to different inputs\cite{intro11}.
+Compared to the transcription factor-promoter system, a modular scaffolding-based signalling pathway has several advantages such as rapid response to inducer, ready amplification to signal, responsive shut-off, and ease of linking input to phenotype.
+For example, Lim and colleagues used a protein scaffold and successfully linked mating to the high-osmolarity stress MAPK pathway in \textit{S.cerevisiae}\cite{intro12}.
+Our modular system would readily enable the establishment and testing of these chimeric signalling pathways.
+Furthermore, a modular DNA scaffold could also assemble metabolic and synthetic pathways into complexes using the idea of enforced proximity.
+Previously, scaffolding has been used to prevent loss of low-abundance intermediates, to increase the effective concentration of reactants and to control metabolic flux by controlling the scaffold assembly, as shown in a carbamoyl phosphate synthase, polyketide synthase, and tryptophan synthase pathway model\cite{intro13,intro14,intro15}.
+It was shown that scaffolding could strikingly increase the production of mevalonate pathway by nearly 100-fold\cite{intro16}.
+Our modular DNA scaffolding system could be used to assemble theoretically any enzymes complexes in complex pathways and improve yield.
+Thus, it would allow both academic and industrial researchers to optimize and enable the biosynthesis of important compounds.
+Theoretically, our system could be readily adapted to improve the efficiency of any enzymatic pathways by offering a scaffolding platform to increase yields in processes such as biosynthesis, signal transduction, and metabolism\cite{tab7}.
+\section*{Rationale}
+While many groups have explored the uses of DNA nanostructures assembled \textit{ex vivo}, little work has been done on DNA origami assembled \textit{in vivo}.
+Present \textit{ex vivo} assembly methods require high amounts of chemically synthesized DNA, high salt concentrations and high temperatures to create nanostructures.
+These conditions are not suitable for living cells, so a new method must be developed for DNA nanostructure assembly \textit{in vivo}.
+Only by having such a tool readily available can fundamental applications like: DNA scaffolds,  molecular machines and riboswitch-like structures be produced inside living cells to show their biological utility.
+\section*{Aims}
+In order to expand the toolkit of synthetic biologists with respect to DNA origami in this project, we propose to (1) develop a method for the \textit{in vivo} assembly of \ac{dsd} nanostructures in \ac{eco} and (2) create a DNA origami scaffold for enzymes to improve pathway efficiency as a proof-of-concept
+\section*{Approaches \& Methodology}
+\subsection*{Developing methods for \textit{in vivo} assembly of \ac{dsd} nanostructures in \ac{eco}}
+In this project, we propose harnessing the ability of \ac{hivrt} to produce \ac{dsd} from \ac{ncrna} encoded on a plasmid.
+Counterintuitively, making enough \ac{dsd} for \textit{in vivo} DNA nanostructure assembly has proven to be challenging.
+We will repurpose the method that Elbaz et al. have utilized to make \ac{ssd} \textit{in vivo}\cite{meth1}.
+A t-RNA\textsuperscript{Lys} genetic part, which both recruits \ac{hivrt} and acts as a transcriptional terminator, will be introduced in front of the sequence encoding the DNA nanostructure strand.
+Following the transcription of the RNA encoding the DNA nanostructure subunits, t-RNA\textsuperscript{Lys} will recruit the two \ac{hivrt} subunits and the \ac{mlrt} to reverse transcribe the RNA back into \ac{dsd}.
+These tools allow the rapid synthesis of large amounts of \ac{dsd} \textit{in vivo}.
+\vspace{2 mm}
+\\
+The \ac{dsd} will be folded using \ac{tal} domains.
+The DNA nanostructures encode sites specific to the domain of \ac{tal} effector proteins originally discovered in plants.
+Praetorius and Dietz have used the \ac{tal} proteins to form the staples of the DNA nanostructure and thus was able to mold the \ac{dsd} into complex 3D structures\cite{meth2}.
+Thus, by coexpressing the \ac{tal} proteins in conjunction with \ac{hivrt}, \ac{mlrt}, and the plasmid encoding the \ac{dsd} subunits, we will be able to assemble complex nanostructures \textit{in vivo}.
+\vspace{2 mm}
+\\
+We will first validate the key design features of our project \textit{in vitro} as described by Han and colleagues \cite{meth3}.
+\textit{In vitro} replicability will be established by PCR amplification of both strands of desired DNA nanostructures.
+Upon synthesis, the PCR products will be annealed to form their \ac{dsd} sequences, which can then be imaged under \ac{afm} after exposure to a concoction of \ac{hivrt}, \ac{mlrt} and several \ac{tal} proteins.
+We expect that PCR amplification will produce \ac{dsd} structures of identical morphology.
+\vspace{2 mm}
+\\
+To test our system \textit{in vivo}, we will transform our plasmid-based expression system into \ac{eco}
+Cells will then be lysed and \ac{dsd} will be purified.
+Native gel electrophoresis will be employed on extracted \ac{dsd} alongside those generated \textit{in vitro}.
+We expected similar pre-folding and post-folding migration patterns for the \ac{dsd} generated \textit{in vitro} and in living cells.
+This will be validated by \ac{afm} imaging to confirm the expected morphology.
+\subsection*{Modelling for modularity in the \ac{dsd} origami shape}
+Distinct from usual DNA nanostructure projects, our approach using pre-annealed \ac{dsd} and \ac{tal} domains eliminate the need to model DNA folding and base-pair interactions.
+Instead, the \textit{in silico} guided design efforts will need to focus on the structural considerations of staple proteins binding to the \ac{dsd} template.
+\cite{meth2} utilized electron density projections modelling to determine desired conformations of the various staple proteins on the \ac{dsd} and predict which of these conformations are optimal for protein-DNA binding.
+Further, Praetorius and Dietz also provides a good resource for understanding how to model staple protein binding to the \ac{dsd} template\cite{meth2}.
+Thus, we will combine these existing tools to guide the design of our DNA nanostructure.
+\subsection*{Creating a DNA origami scaffold for enzymes to improve pathway efficiency as a proof-of-concept}
+We propose creating a \ac{dsd} scaffold upon which enzymes can be assembled into a particular three-dimensional arrangement to enhance enzymatic pathway efficiency.
+Our DNA nanostructure is assembled from pieces of \ac{dsd} held together by \ac{tal} effectors that act as staple proteins.
+Taking advantage of these proteins being present on the DNA scaffold, we will create fusion proteins between the \ac{tal} effectors and our enzymes of interest.
+We plan on creating this fusion by drawing on the methods of Praetorius and Dietz, who tested the suitability of eleven different peptide linkers to fuse two \ac{tal} proteins and create a double-\ac{tal} staple\cite{meth2}.
+These linkers were based upon the prototypical flexible glycine-serine, or “GS” linker, from which they found a SAGA (Ser-Ala-Gly-Ser) linker to be ideal.
+They further used this short flexible linker to create an N-terminal fusion between a \ac{tal} protein and GFP.
+We will therefore link each enzyme of interest to the N-terminal of the \ac{tal} at the desired location on the DNA nanostructure using a SAGA linker.
+Since the optimal linker for GFP and a functional enzyme may differ, we will compare the enzymatic activities between the purified and fusion proteins to ensure minimal change in activity.
+In the event that enzymatic function is affected due to the short SAGA linker, we will test longer flexible linkers made of glycine, serine and alanine to ensure optimal length from the DNA nanostructure\cite{meth4}
+\subsection*{Modelling for Enzymatic Scaffolding}
+We will produce a model that can accurately predict the enzyme-substrate kinetics for the overall DNA scaffold in order to optimise its design.
+The random nature of  molecules moving around and interacting inside of a cell is best captured using a stochastic method, for which several parameters must be considered\cite{meth5,meth6,meth7}.
+These include proximity (how close subsequent cascade enzymes are to each other), spatial orientation (arranging geometry of active sites), substrate channelling (what path the substrate will likely take from enzyme to enzyme, and what protein bridges it may use for the purpose)\cite{meth5,meth6}.
+Other considerations unique to DNA scaffolds are pH changes in the active site and the negative charge of the DNA\cite{meth7}.
+We also aim to specifically quantify to what extent the DNA scaffold increases the efficiency or yield of the pathway under consideration.
+By bringing all these parameters together, we hope to create a model that can: (1) determine the optimal shape among a subset of DNA origami nanostructures for a given enzymatic pathway and (2) predict the extent to which a particular scaffold will increase pathway efficiency.
+\section*{Resources \& Personnel}
+Recent work on DNA nanostructures has repurposed DNA to increase the efficiency of enzymatic function \textit{ex vivo}.
+We have therefore assembled a multidisciplinary team of genetic engineers, biochemists, physicists, chemical engineers, and bioinformaticians to address the critical gap to bring this concept into an \textit{in vivo} setting.
+The McMaster Biomod team is ideally positioned to carry out this project.
+In 2017, we participated in the \ac{igem} competition in Boston, MA, and captured a bronze medal.
+The team members all have extensive lab experience in many of the techniques needed for the current project, such as genetic cloning, protein and plasmid purification, mathematical modelling, etc.
+We are currently supervised by Dr. Zeinab Hosseini-Doust in the Department of Chemical Engineering at McMaster University.
+Collaborations with other faculty members of various departments at McMaster University has given us many insights in their special field of expertise.
+Together, this team is poised to make a transformative contribution in this exciting area.
+\section*{Potential Limitations}
+We recognize that the extensive cloning involved in this project could pose problems that could delay the progress of the project.
+If the proposed restriction enzyme-based cloning methods do not successfully form the desired lentiviral construct, we will use an alternative approach, such as golden gate cloning, gibson assembly, or direct plasmid synthesis.
+As for potential difficulties with the sensitive microscopy techniques like \ac{afm} to validate this project, we will be working together with individuals at McMaster University who have an expertise in structural biology and imaging.
+\vspace{2 mm}
+\\
+We also recognize that there are likely pathways that cannot be optimized with our system due to inherent incompatibilities.
+For example, enzymes with charge-sensitive active or allosteric sites that are inactivated by proximity to the DNA scaffold are contraindicated with our approach\cite{meth7}.
+Due  to constraints on both the size of plasmids that can be expressed as the backbone and the number of plasmids that can express staple proteins, there are limits to the complexity of the DNA nanostructure and the number of enzymes attached to it.
+Tuning the expression of these individual parts to ensure an optimal concentration of each for scaffold formation is something else that needs to be carefully considered and tested.
+Nonetheless, we believe that there is clear value to the addition of being able to produce \ac{dsd} scaffolds \textit{in vivo}.
+
+\section*{Conclusion}
+We propose developing a novel method for the \textit{in vivo} assembly of \ac{dsd} nanostructures to allow the translation of developing DNA origami applications such as scaffolding and DNA nanorobots to the setting of live cells.
+To overcome current production bottlenecks of the harsh assembly conditions and the high cost of large-scale DNA synthesis, we utilize (1) a novel reverse transcriptase-based method to generate large amounts of \ac{dsd} \textit{in vivo} and (2) dusion proteins of \ac{tal} effectors and enzymes to create the desired shape while forming an enzyme scaffold.
+Therefore, our proposal allows the production of \ac{dsd} origami in a scalable and cost-effective manner.
+Importantly, we expect this method to give the \textit{in vivo} assembly of \ac{dsd} nanostructures sufficient modularity to be easily used by future researchers and compatible with existing design frameworks.
+Thus, the proposed technology should bridge the gap that limits the application of DNA nanostructures to living biological systems.
+\bibliographystyle{naturemag}
+\bibliography{refs}
+\end{document}

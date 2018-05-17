@@ -1,0 +1,279 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{intro1}
+\bibinfo{author}{Rothemund, P.~W.}
+\newblock \bibinfo{title}{{{F}olding {D}{N}{A} to create nanoscale shapes and
+  patterns}}.
+\newblock \emph{\bibinfo{journal}{Nature}} \textbf{\bibinfo{volume}{440}},
+  \bibinfo{pages}{297--302} (\bibinfo{year}{2006}).
+
+\bibitem{intro2}
+\bibinfo{author}{Douglas, S.~M.} \emph{et~al.}
+\newblock \bibinfo{title}{{{S}elf-assembly of {D}{N}{A} into nanoscale
+  three-dimensional shapes}}.
+\newblock \emph{\bibinfo{journal}{Nature}} \textbf{\bibinfo{volume}{459}},
+  \bibinfo{pages}{414--418} (\bibinfo{year}{2009}).
+
+\bibitem{intro3}
+\bibinfo{author}{Han, D.} \emph{et~al.}
+\newblock \bibinfo{title}{{{D}{N}{A} origami with complex curvatures in
+  three-dimensional space}}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{332}},
+  \bibinfo{pages}{342--346} (\bibinfo{year}{2011}).
+
+\bibitem{intro4}
+\bibinfo{author}{Chandrasekaran, A.~R.}, \bibinfo{author}{Anderson, N.},
+  \bibinfo{author}{Kizer, M.}, \bibinfo{author}{Halvorsen, K.} \&
+  \bibinfo{author}{Wang, X.}
+\newblock \bibinfo{title}{{{B}eyond the {F}old: {E}merging {B}iological
+  {A}pplications of {D}{N}{A} {O}rigami}}.
+\newblock \emph{\bibinfo{journal}{Chembiochem}} \textbf{\bibinfo{volume}{17}},
+  \bibinfo{pages}{1081--1089} (\bibinfo{year}{2016}).
+
+\bibitem{intro5}
+\bibinfo{author}{Douglas, S.~M.}, \bibinfo{author}{Bachelet, I.} \&
+  \bibinfo{author}{Church, G.~M.}
+\newblock \bibinfo{title}{{{A} logic-gated nanorobot for targeted transport of
+  molecular payloads}}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{335}},
+  \bibinfo{pages}{831--834} (\bibinfo{year}{2012}).
+
+\bibitem{intro6}
+\bibinfo{author}{Tintore, M.}, \bibinfo{author}{Gallego, I.},
+  \bibinfo{author}{Manning, B.}, \bibinfo{author}{Eritja, R.} \&
+  \bibinfo{author}{Fabrega, C.}
+\newblock \bibinfo{title}{{{D}{N}{A} origami as a {D}{N}{A} repair nanosensor
+  at the single-molecule level}}.
+\newblock \emph{\bibinfo{journal}{Angew. Chem. Int. Ed. Engl.}}
+  \textbf{\bibinfo{volume}{52}}, \bibinfo{pages}{7747--7750}
+  (\bibinfo{year}{2013}).
+
+\bibitem{intro7}
+\bibinfo{author}{Kuzuya, A.} \emph{et~al.}
+\newblock \bibinfo{title}{{{N}anomechanical {D}{N}{A} origami p{H} sensors}}.
+\newblock \emph{\bibinfo{journal}{Sensors (Basel)}}
+  \textbf{\bibinfo{volume}{14}}, \bibinfo{pages}{19329--19335}
+  (\bibinfo{year}{2014}).
+
+\bibitem{intro8}
+\bibinfo{author}{Good, M.~C.}, \bibinfo{author}{Zalatan, J.~G.} \&
+  \bibinfo{author}{Lim, W.~A.}
+\newblock \bibinfo{title}{{{S}caffold proteins: hubs for controlling the flow
+  of cellular information}}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{332}},
+  \bibinfo{pages}{680--686} (\bibinfo{year}{2011}).
+
+\bibitem{intro9}
+\bibinfo{author}{Lee, M.~J.} \emph{et~al.}
+\newblock \bibinfo{title}{{{E}ngineered synthetic scaffolds for organizing
+  proteins within the bacterial cytoplasm}}.
+\newblock \emph{\bibinfo{journal}{Nat. Chem. Biol.}}
+  \textbf{\bibinfo{volume}{14}}, \bibinfo{pages}{142--147}
+  (\bibinfo{year}{2018}).
+
+\bibitem{tab7}
+\bibinfo{author}{Chen, R.} \emph{et~al.}
+\newblock \bibinfo{title}{{{B}iomolecular scaffolds for enhanced signaling and
+  catalytic efficiency}}.
+\newblock \emph{\bibinfo{journal}{Curr. Opin. Biotechnol.}}
+  \textbf{\bibinfo{volume}{28}}, \bibinfo{pages}{59--68}
+  (\bibinfo{year}{2014}).
+
+\bibitem{tab1}
+\bibinfo{author}{Zhang, Y.} \emph{et~al.}
+\newblock \bibinfo{title}{{{U}sing unnatural protein fusions to engineer
+  resveratrol biosynthesis in yeast and {M}ammalian cells}}.
+\newblock \emph{\bibinfo{journal}{J. Am. Chem. Soc.}}
+  \textbf{\bibinfo{volume}{128}}, \bibinfo{pages}{13030--13031}
+  (\bibinfo{year}{2006}).
+
+\bibitem{tab2}
+\bibinfo{author}{Albertsen, L.} \emph{et~al.}
+\newblock \bibinfo{title}{{{D}iversion of flux toward sesquiterpene production
+  in {S}accharomyces cerevisiae by fusion of host and heterologous enzymes}}.
+\newblock \emph{\bibinfo{journal}{Appl. Environ. Microbiol.}}
+  \textbf{\bibinfo{volume}{77}}, \bibinfo{pages}{1033--1040}
+  (\bibinfo{year}{2011}).
+
+\bibitem{tab3}
+\bibinfo{author}{Tsai, S.~L.}, \bibinfo{author}{Oh, J.},
+  \bibinfo{author}{Singh, S.}, \bibinfo{author}{Chen, R.} \&
+  \bibinfo{author}{Chen, W.}
+\newblock \bibinfo{title}{{{F}unctional assembly of minicellulosomes on the
+  {S}accharomyces cerevisiae cell surface for cellulose hydrolysis and ethanol
+  production}}.
+\newblock \emph{\bibinfo{journal}{Appl. Environ. Microbiol.}}
+  \textbf{\bibinfo{volume}{75}}, \bibinfo{pages}{6087--6093}
+  (\bibinfo{year}{2009}).
+
+\bibitem{tab4}
+\bibinfo{author}{Yeates, T.~O.}, \bibinfo{author}{Kerfeld, C.~A.},
+  \bibinfo{author}{Heinhorst, S.}, \bibinfo{author}{Cannon, G.~C.} \&
+  \bibinfo{author}{Shively, J.~M.}
+\newblock \bibinfo{title}{{{P}rotein-based organelles in bacteria: carboxysomes
+  and related microcompartments}}.
+\newblock \emph{\bibinfo{journal}{Nat. Rev. Microbiol.}}
+  \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{681--691}
+  (\bibinfo{year}{2008}).
+
+\bibitem{tab5}
+\bibinfo{author}{Choudhary, S.}, \bibinfo{author}{Quin, M.~B.},
+  \bibinfo{author}{Sanders, M.~A.}, \bibinfo{author}{Johnson, E.~T.} \&
+  \bibinfo{author}{Schmidt-Dannert, C.}
+\newblock \bibinfo{title}{{{E}ngineered protein nano-compartments for targeted
+  enzyme localization}}.
+\newblock \emph{\bibinfo{journal}{PLoS ONE}} \textbf{\bibinfo{volume}{7}},
+  \bibinfo{pages}{e33342} (\bibinfo{year}{2012}).
+
+\bibitem{intro16}
+\bibinfo{author}{Dueber, J.~E.} \emph{et~al.}
+\newblock \bibinfo{title}{{{S}ynthetic protein scaffolds provide modular
+  control over metabolic flux}}.
+\newblock \emph{\bibinfo{journal}{Nat. Biotechnol.}}
+  \textbf{\bibinfo{volume}{27}}, \bibinfo{pages}{753--759}
+  (\bibinfo{year}{2009}).
+
+\bibitem{tab8}
+\bibinfo{author}{Wilner, O.~I.}, \bibinfo{author}{Shimron, S.},
+  \bibinfo{author}{Weizmann, Y.}, \bibinfo{author}{Wang, Z.~G.} \&
+  \bibinfo{author}{Willner, I.}
+\newblock \bibinfo{title}{{{S}elf-assembly of enzymes on {D}{N}{A} scaffolds:
+  en route to biocatalytic cascades and the synthesis of metallic nanowires}}.
+\newblock \emph{\bibinfo{journal}{Nano Lett.}} \textbf{\bibinfo{volume}{9}},
+  \bibinfo{pages}{2040--2043} (\bibinfo{year}{2009}).
+
+\bibitem{tab9}
+\bibinfo{author}{Conrado, R.~J.} \emph{et~al.}
+\newblock \bibinfo{title}{{{D}{N}{A}-guided assembly of biosynthetic pathways
+  promotes improved catalytic efficiency}}.
+\newblock \emph{\bibinfo{journal}{Nucleic Acids Res.}}
+  \textbf{\bibinfo{volume}{40}}, \bibinfo{pages}{1879--1889}
+  (\bibinfo{year}{2012}).
+
+\bibitem{tab10}
+\bibinfo{author}{Higgins, N.~P.} \& \bibinfo{author}{Vologodskii, A.~V.}
+\newblock \bibinfo{title}{{{T}opological {B}ehavior of {P}lasmid {D}{N}{A}}}.
+\newblock \emph{\bibinfo{journal}{Microbiol Spectr}}
+  \textbf{\bibinfo{volume}{3}} (\bibinfo{year}{2015}).
+
+\bibitem{tab11}
+\bibinfo{author}{Guo, P.}, \bibinfo{author}{Haque, F.},
+  \bibinfo{author}{Hallahan, B.}, \bibinfo{author}{Reif, R.} \&
+  \bibinfo{author}{Li, H.}
+\newblock \bibinfo{title}{{{U}niqueness, advantages, challenges, solutions, and
+  perspectives in therapeutics applying {R}{N}{A} nanotechnology}}.
+\newblock \emph{\bibinfo{journal}{Nucleic Acid Ther}}
+  \textbf{\bibinfo{volume}{22}}, \bibinfo{pages}{226--245}
+  (\bibinfo{year}{2012}).
+
+\bibitem{tab12}
+\bibinfo{author}{Delebecque, C.~J.}, \bibinfo{author}{Lindner, A.~B.},
+  \bibinfo{author}{Silver, P.~A.} \& \bibinfo{author}{Aldaye, F.~A.}
+\newblock \bibinfo{title}{{{O}rganization of intracellular reactions with
+  rationally designed {R}{N}{A} assemblies}}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{333}},
+  \bibinfo{pages}{470--474} (\bibinfo{year}{2011}).
+
+\bibitem{intro11}
+\bibinfo{author}{Bhattacharyya, R.~P.}, \bibinfo{author}{Remenyi, A.},
+  \bibinfo{author}{Yeh, B.~J.} \& \bibinfo{author}{Lim, W.~A.}
+\newblock \bibinfo{title}{{{D}omains, motifs, and scaffolds: the role of
+  modular interactions in the evolution and wiring of cell signaling
+  circuits}}.
+\newblock \emph{\bibinfo{journal}{Annu. Rev. Biochem.}}
+  \textbf{\bibinfo{volume}{75}}, \bibinfo{pages}{655--680}
+  (\bibinfo{year}{2006}).
+
+\bibitem{intro12}
+\bibinfo{author}{Park, S.~H.}, \bibinfo{author}{Zarrinpar, A.} \&
+  \bibinfo{author}{Lim, W.~A.}
+\newblock \bibinfo{title}{{{R}ewiring {M}{A}{P} kinase pathways using
+  alternative scaffold assembly mechanisms}}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{299}},
+  \bibinfo{pages}{1061--1064} (\bibinfo{year}{2003}).
+
+\bibitem{intro13}
+\bibinfo{author}{Miles, E.~W.}, \bibinfo{author}{Rhee, S.} \&
+  \bibinfo{author}{Davies, D.~R.}
+\newblock \bibinfo{title}{{{T}he molecular basis of substrate channeling}}.
+\newblock \emph{\bibinfo{journal}{J. Biol. Chem.}}
+  \textbf{\bibinfo{volume}{274}}, \bibinfo{pages}{12193--12196}
+  (\bibinfo{year}{1999}).
+
+\bibitem{intro14}
+\bibinfo{author}{Thoden, J.~B.}, \bibinfo{author}{Holden, H.~M.},
+  \bibinfo{author}{Wesenberg, G.}, \bibinfo{author}{Raushel, F.~M.} \&
+  \bibinfo{author}{Rayment, I.}
+\newblock \bibinfo{title}{{{S}tructure of carbamoyl phosphate synthetase: a
+  journey of 96 {A} from substrate to product}}.
+\newblock \emph{\bibinfo{journal}{Biochemistry}} \textbf{\bibinfo{volume}{36}},
+  \bibinfo{pages}{6305--6316} (\bibinfo{year}{1997}).
+
+\bibitem{intro15}
+\bibinfo{author}{An, S.}, \bibinfo{author}{Kumar, R.}, \bibinfo{author}{Sheets,
+  E.~D.} \& \bibinfo{author}{Benkovic, S.~J.}
+\newblock \bibinfo{title}{{{R}eversible compartmentalization of de novo purine
+  biosynthetic complexes in living cells}}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{320}},
+  \bibinfo{pages}{103--106} (\bibinfo{year}{2008}).
+
+\bibitem{meth1}
+\bibinfo{author}{Elbaz, J.}, \bibinfo{author}{Yin, P.} \&
+  \bibinfo{author}{Voigt, C.~A.}
+\newblock \bibinfo{title}{{{G}enetic encoding of {D}{N}{A} nanostructures and
+  their self-assembly in living bacteria}}.
+\newblock \emph{\bibinfo{journal}{Nat Commun}} \textbf{\bibinfo{volume}{7}},
+  \bibinfo{pages}{11179} (\bibinfo{year}{2016}).
+
+\bibitem{meth2}
+\bibinfo{author}{Praetorius, F.} \& \bibinfo{author}{Dietz, H.}
+\newblock \bibinfo{title}{{{S}elf-assembly of genetically encoded
+  {D}{N}{A}-protein hybrid nanoscale shapes}}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{355}}
+  (\bibinfo{year}{2017}).
+
+\bibitem{meth3}
+\bibinfo{author}{Han, D.} \emph{et~al.}
+\newblock \bibinfo{title}{{{S}ingle-stranded {D}{N}{A} and {R}{N}{A} origami}}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{358}}
+  (\bibinfo{year}{2017}).
+
+\bibitem{meth4}
+\bibinfo{author}{Chen, X.}, \bibinfo{author}{Zaro, J.~L.} \&
+  \bibinfo{author}{Shen, W.~C.}
+\newblock \bibinfo{title}{{{F}usion protein linkers: property, design and
+  functionality}}.
+\newblock \emph{\bibinfo{journal}{Adv. Drug Deliv. Rev.}}
+  \textbf{\bibinfo{volume}{65}}, \bibinfo{pages}{1357--1369}
+  (\bibinfo{year}{2013}).
+
+\bibitem{meth5}
+\bibinfo{author}{Fu, J.} \emph{et~al.}
+\newblock \bibinfo{title}{{{A}ssembly of multienzyme complexes on {D}{N}{A}
+  nanostructures}}.
+\newblock \emph{\bibinfo{journal}{Nat Protoc}} \textbf{\bibinfo{volume}{11}},
+  \bibinfo{pages}{2243--2273} (\bibinfo{year}{2016}).
+
+\bibitem{meth6}
+\bibinfo{author}{Fu, J.}, \bibinfo{author}{Liu, M.}, \bibinfo{author}{Liu, Y.},
+  \bibinfo{author}{Woodbury, N.~W.} \& \bibinfo{author}{Yan, H.}
+\newblock \bibinfo{title}{{{I}nterenzyme substrate diffusion for an enzyme
+  cascade organized on spatially addressable {D}{N}{A} nanostructures}}.
+\newblock \emph{\bibinfo{journal}{J. Am. Chem. Soc.}}
+  \textbf{\bibinfo{volume}{134}}, \bibinfo{pages}{5516--5519}
+  (\bibinfo{year}{2012}).
+
+\bibitem{meth7}
+\bibinfo{author}{Zhang, Y.}, \bibinfo{author}{Tsitkov, S.} \&
+  \bibinfo{author}{Hess, H.}
+\newblock \bibinfo{title}{Proximity does not contribute to activity enhancement
+  in the glucose oxidase–horseradish peroxidase cascade}.
+\newblock \emph{\bibinfo{journal}{Nature Communications}}
+  \textbf{\bibinfo{volume}{7}} (\bibinfo{year}{2016}).
+
+\end{thebibliography}
