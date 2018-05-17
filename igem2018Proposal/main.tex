@@ -69,19 +69,18 @@
 \pagestyle{fancy}
 \begin{abstract}
 Self-assembling DNA nanostructures hold great promise in controlling the spatial organization and orientation of enzymatic complexes.
-However, their usage \textit{in vivo} has been limited by the harsh conditions needed for assembly.
-We propose a modular toolkit to allow both researchers and future \ac{igem} participants to easily build DNA nanostructures that can be decorated with proteins in a wide range of cells.
-Our proposed solution uses a novel  reverse-transcriptase based method to synthesize necessary \ac{dsd} in the cellular environment and then uses the sequence-specific recognition properties of \ac{tal} domains of  effector proteins to assemble them into complex 2D or 3D shapes.
+However, their usage \textit{in vivo} has been limited, as conditions harsh for living cells are required for assembly.
+We propose a modular toolkit to allow both researchers and future \ac{igem} participants to easily build DNA nanostructures that can be decorated with proteins within many different organisms.
+Our proposed solution uses a novel reverse-transcriptase based method to synthesize enough double-stranded \ac{dsd} in the cell and takes advantage of the sequence-specific binding of \ac{tal} domains of  effector proteins to assemble them into complex 2D or 3D shapes.
 Proteins of interest could then be fused with the \ac{tal} domains to bring them into proximity of each other and control their spatial orientation.
 The proposed technology can be used to increase the efficiency of complex enzyme cascades or to create chimeric signalling pathways by linking signals to downstream messengers.
-The modular nature allows the toolkit to be easily integrated into any synthetic biology project and could drastically increase the efficiency of existing enzymatic pathways.
+The modular nature allows the toolkit to be easily integrated into any synthetic biology project and could drastically increase the efficiency of existing enzymatic pathways, with many applications in industry.
 \end{abstract}
 \section*{Introduction}
 \subsection*{DNA Nanostructures}
 In 2006, Paul Rothemund introduced a novel method to create “DNA origami” through directed folding of a long \ac{ssd} “scaffold” into arbitrary shapes using short \ac{ssd} segments as “staples”\cite{intro1}.
 This method revolutionized DNA nanotechnology by offering fine control over the creation of complex shapes.
 To date, various  groups have successfully applied modifications of this technique to create both 2D and 3D shapes, such as various icons, monoliths, and nanoflasks\cite{intro1,intro2,intro3,intro4}.
-These nanostructures have seemingly limitless utility in a variety of applications.
 As drug delivery vehicles, aptamer-gated DNA nano-robots loaded with antibody fragments can change their configuration to deliver cargo to specific target cells\cite{intro5}.
 As biosensors, DNA nanostructures have successfully provided readouts of enzymatic activity and pH\cite{intro6,intro7}.
 The functionalization of DNA nanostructures can be expanded even further through creating DNA-protein arrangements.
@@ -92,10 +91,10 @@ Developing DNA origami, decorated with functional proteins/small molecules that 
 \subsection*{\textit{In Vivo} DNA Nanostructures: Scaffolds as a Proof-of-Concept}
 As a proof-of-concept application, we will use our toolkit to create an \textit{in vivo} DNA nanostructure scaffold for enzymatic reactions.
 By spatially fixing enzymes relative to one another, cellular scaffolds increase the efficiency of signaling cascades and biosynthetic pathways by shuttling substrates, stabilizing reaction intermediates and reducing diffusion time\cite{intro8,intro9}.
-While \textit{ex vivo} methods for engineering synthetic scaffolds have been well developed, there is still a growing need to express them \textit{in vivo} to produce “cell-factories”\cite{tab7}.
-However, existing nanostructure strategies currently being researched contains innate flaws that lower their potential when expressed in living bacteria, as outlined in \autoref{tab:surc}.
-In brief, the main challenges currently faced by the \textit{in vivo} synthesis of engineered scaffolds are due to (1) instability of backbone structures and (2) unpredictability of scaffold structure upon expression \textit{in vitro}.
-Ideally, DNA nanostructures expressed\textit{in vivo} offer unique advantages that tackle both of these issues, as they are not only highly stable structures that maintain rigidity, but also modular in the possible shapes, which allows for optimized intermediate diffusion\cite{intro1}.
+While \textit{ex vivo} methods for engineering synthetic scaffolds have been well studied, there is still a growing need to express them \textit{in vivo} to produce “cell-factories”\cite{tab7}.
+However, existing \textit{in vivo} nanostructure construction strategies currently being researched present potential issues of being expressed in bacteria, as outlined in \autoref{tab:surc}.
+In brief, the main challenges currently faced by the \textit{in vivo} synthesis of engineered scaffolds are due to (1) instability of backbone structures and (2) unpredictability of scaffold structure upon expression.
+Ideally, DNA nanostructures expressed \textit{in vivo} using our method tackle both of these issues, as they are not only highly stable structures that maintain rigidity, but also modular in the possible shapes, which allows for optimized intermediate diffusion\cite{intro1}.
 \begin{table}[h!]
     \centering
     \begin{tabulary}{\linewidth}{l l}
@@ -128,14 +127,14 @@ This genetic circuit will be cloned in an easy expression system that allows fut
 \vspace{2 mm}
 \\
 The extensive utility of \textit{in vivo} DNA nanostructure assembly can be seen by the implications of creating DNA scaffolds.
-As proteins scaffolds act naturally as hubs to aggregate signals and then activating specific downstream pathways, a scaffold could be used to alter responses to signalling inducers in a similar manner to how promoters could react to different inputs\cite{intro11}.
+As proteins scaffolds already act as a way to aggregate proteins and activate specific downstream pathways, a scaffold could be used to alter responses to signalling inducers in a similar manner to how promoters could react to different inputs\cite{intro11}.
 Compared to the transcription factor-promoter system, a modular scaffolding-based signalling pathway has several advantages such as rapid response to inducer, ready amplification to signal, responsive shut-off, and ease of linking input to phenotype.
 For example, Lim and colleagues used a protein scaffold and successfully linked mating to the high-osmolarity stress MAPK pathway in \textit{S.cerevisiae}\cite{intro12}.
 Our modular system would readily enable the establishment and testing of these chimeric signalling pathways.
 Furthermore, a modular DNA scaffold could also assemble metabolic and synthetic pathways into complexes using the idea of enforced proximity.
-Previously, scaffolding has been used to prevent loss of low-abundance intermediates, to increase the effective concentration of reactants and to control metabolic flux by controlling the scaffold assembly, as shown in a carbamoyl phosphate synthase, polyketide synthase, and tryptophan synthase pathway model\cite{intro13,intro14,intro15}.
+Previously, scaffolding has been used to prevent loss of low-abundance intermediates, to increase the effective concentration of reactants and to control metabolic flux by controlling the scaffold assembly, as shown in carbamoyl phosphate synthase, polyketide synthase, and tryptophan synthase pathways\cite{intro13,intro14,intro15}.
 It was shown that scaffolding could strikingly increase the production of mevalonate pathway by nearly 100-fold\cite{intro16}.
-Our modular DNA scaffolding system could be used to assemble theoretically any enzymes complexes in complex pathways and improve yield.
+Our modular DNA scaffolding system could theoretically be used to assemble any enzyme complex involved in a multistep metabolic pathway and improve yield.
 Thus, it would allow both academic and industrial researchers to optimize and enable the biosynthesis of important compounds.
 Theoretically, our system could be readily adapted to improve the efficiency of any enzymatic pathways by offering a scaffolding platform to increase yields in processes such as biosynthesis, signal transduction, and metabolism\cite{tab7}.
 \section*{Rationale}
@@ -167,7 +166,7 @@ Upon synthesis, the PCR products will be annealed to form their \ac{dsd} sequenc
 We expect that PCR amplification will produce \ac{dsd} structures of identical morphology.
 \vspace{2 mm}
 \\
-To test our system \textit{in vivo}, we will transform our plasmid-based expression system into \ac{eco}
+To test our system \textit{in vivo}, we will transform our plasmid-based expression system into \ac{eco}.
 Cells will then be lysed and \ac{dsd} will be purified.
 Native gel electrophoresis will be employed on extracted \ac{dsd} alongside those generated \textit{in vitro}.
 We expected similar pre-folding and post-folding migration patterns for the \ac{dsd} generated \textit{in vitro} and in living cells.
@@ -175,8 +174,8 @@ This will be validated by \ac{afm} imaging to confirm the expected morphology.
 \subsection*{Modelling for modularity in the \ac{dsd} origami shape}
 Distinct from usual DNA nanostructure projects, our approach using pre-annealed \ac{dsd} and \ac{tal} domains eliminate the need to model DNA folding and base-pair interactions.
 Instead, the \textit{in silico} guided design efforts will need to focus on the structural considerations of staple proteins binding to the \ac{dsd} template.
-\cite{meth2} utilized electron density projections modelling to determine desired conformations of the various staple proteins on the \ac{dsd} and predict which of these conformations are optimal for protein-DNA binding.
-Further, Praetorius and Dietz also provides a good resource for understanding how to model staple protein binding to the \ac{dsd} template\cite{meth2}.
+Praetorius and Dietz utilized electron density projections modelling to determine desired conformations of the various staple proteins on the \ac{dsd} and predict which of these conformations are optimal for protein-DNA binding\cite{meth2}.
+Furthermore, Praetorius and Dietz also provide a good resource for understanding how to model staple protein binding to the \ac{dsd} template\cite{meth2}.
 Thus, we will combine these existing tools to guide the design of our DNA nanostructure.
 \subsection*{Creating a DNA origami scaffold for enzymes to improve pathway efficiency as a proof-of-concept}
 We propose creating a \ac{dsd} scaffold upon which enzymes can be assembled into a particular three-dimensional arrangement to enhance enzymatic pathway efficiency.
@@ -191,7 +190,7 @@ In the event that enzymatic function is affected due to the short SAGA linker, w
 \subsection*{Modelling for Enzymatic Scaffolding}
 We will produce a model that can accurately predict the enzyme-substrate kinetics for the overall DNA scaffold in order to optimise its design.
 The random nature of  molecules moving around and interacting inside of a cell is best captured using a stochastic method, for which several parameters must be considered\cite{meth5,meth6,meth7}.
-These include proximity (how close subsequent cascade enzymes are to each other), spatial orientation (arranging geometry of active sites), substrate channelling (what path the substrate will likely take from enzyme to enzyme, and what protein bridges it may use for the purpose)\cite{meth5,meth6}.
+These include proximity (how close subsequent cascade enzymes are to each other), spatial orientation (arranging geometry of active sites), substrate channelling (what path the substrate will likely take from enzyme to enzyme, and what protein bridges it may use for such a purpose)\cite{meth5,meth6}.
 Other considerations unique to DNA scaffolds are pH changes in the active site and the negative charge of the DNA\cite{meth7}.
 We also aim to specifically quantify to what extent the DNA scaffold increases the efficiency or yield of the pathway under consideration.
 By bringing all these parameters together, we hope to create a model that can: (1) determine the optimal shape among a subset of DNA origami nanostructures for a given enzymatic pathway and (2) predict the extent to which a particular scaffold will increase pathway efficiency.
@@ -202,7 +201,7 @@ The McMaster Biomod team is ideally positioned to carry out this project.
 In 2017, we participated in the \ac{igem} competition in Boston, MA, and captured a bronze medal.
 The team members all have extensive lab experience in many of the techniques needed for the current project, such as genetic cloning, protein and plasmid purification, mathematical modelling, etc.
 We are currently supervised by Dr. Zeinab Hosseini-Doust in the Department of Chemical Engineering at McMaster University.
-Collaborations with other faculty members of various departments at McMaster University has given us many insights in their special field of expertise.
+Collaborations with other faculty members of various departments at McMaster University have given us many insights in their special field of expertise.
 Together, this team is poised to make a transformative contribution in this exciting area.
 \section*{Potential Limitations}
 We recognize that the extensive cloning involved in this project could pose problems that could delay the progress of the project.
@@ -218,10 +217,10 @@ Nonetheless, we believe that there is clear value to the addition of being able 
 
 \section*{Conclusion}
 We propose developing a novel method for the \textit{in vivo} assembly of \ac{dsd} nanostructures to allow the translation of developing DNA origami applications such as scaffolding and DNA nanorobots to the setting of live cells.
-To overcome current production bottlenecks of the harsh assembly conditions and the high cost of large-scale DNA synthesis, we utilize (1) a novel reverse transcriptase-based method to generate large amounts of \ac{dsd} \textit{in vivo} and (2) dusion proteins of \ac{tal} effectors and enzymes to create the desired shape while forming an enzyme scaffold.
-Therefore, our proposal allows the production of \ac{dsd} origami in a scalable and cost-effective manner.
-Importantly, we expect this method to give the \textit{in vivo} assembly of \ac{dsd} nanostructures sufficient modularity to be easily used by future researchers and compatible with existing design frameworks.
-Thus, the proposed technology should bridge the gap that limits the application of DNA nanostructures to living biological systems.
+To overcome current production bottlenecks of the harsh assembly conditions and the high cost of large-scale DNA synthesis, we utilize (1) a novel reverse transcriptase-based method to generate large amounts of \ac{dsd} \textit{in vivo} and (2) fusion proteins of \ac{tal} effectors and enzymes to create the desired shape while forming an enzyme scaffold.
+Therefore, our proposal allows the production of \ac{dsd} origami \textit{in vivo} in a scalable and cost-effective manner.
+Notably, we expect this method to give the \textit{in vivo} assembly of \ac{dsd} nanostructures sufficient modularity to be easily used by future researchers as well as being compatible with existing design frameworks.
+The proposed technique would bridge the gap that limits the application of DNA nanostructures to living biological systems.
 \bibliographystyle{naturemag}
 \bibliography{refs}
 \end{document}
