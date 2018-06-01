@@ -1,0 +1,111 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{intro1}
+\bibinfo{author}{Rothemund, P.~W.}
+\newblock \bibinfo{title}{{{F}olding {D}{N}{A} to create nanoscale shapes and
+  patterns}}.
+\newblock \emph{\bibinfo{journal}{Nature}} \textbf{\bibinfo{volume}{440}},
+  \bibinfo{pages}{297--302} (\bibinfo{year}{2006}).
+
+\bibitem{intro2}
+\bibinfo{author}{Douglas, S.~M.} \emph{et~al.}
+\newblock \bibinfo{title}{{{S}elf-assembly of {D}{N}{A} into nanoscale
+  three-dimensional shapes}}.
+\newblock \emph{\bibinfo{journal}{Nature}} \textbf{\bibinfo{volume}{459}},
+  \bibinfo{pages}{414--418} (\bibinfo{year}{2009}).
+
+\bibitem{intro3}
+\bibinfo{author}{Han, D.} \emph{et~al.}
+\newblock \bibinfo{title}{{{D}{N}{A} origami with complex curvatures in
+  three-dimensional space}}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{332}},
+  \bibinfo{pages}{342--346} (\bibinfo{year}{2011}).
+
+\bibitem{intro4}
+\bibinfo{author}{Chandrasekaran, A.~R.}, \bibinfo{author}{Anderson, N.},
+  \bibinfo{author}{Kizer, M.}, \bibinfo{author}{Halvorsen, K.} \&
+  \bibinfo{author}{Wang, X.}
+\newblock \bibinfo{title}{{{B}eyond the {F}old: {E}merging {B}iological
+  {A}pplications of {D}{N}{A} {O}rigami}}.
+\newblock \emph{\bibinfo{journal}{Chembiochem}} \textbf{\bibinfo{volume}{17}},
+  \bibinfo{pages}{1081--1089} (\bibinfo{year}{2016}).
+
+\bibitem{intro8}
+\bibinfo{author}{Good, M.~C.}, \bibinfo{author}{Zalatan, J.~G.} \&
+  \bibinfo{author}{Lim, W.~A.}
+\newblock \bibinfo{title}{{{S}caffold proteins: hubs for controlling the flow
+  of cellular information}}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{332}},
+  \bibinfo{pages}{680--686} (\bibinfo{year}{2011}).
+
+\bibitem{intro9}
+\bibinfo{author}{Lee, M.~J.} \emph{et~al.}
+\newblock \bibinfo{title}{{{E}ngineered synthetic scaffolds for organizing
+  proteins within the bacterial cytoplasm}}.
+\newblock \emph{\bibinfo{journal}{Nat. Chem. Biol.}}
+  \textbf{\bibinfo{volume}{14}}, \bibinfo{pages}{142--147}
+  (\bibinfo{year}{2018}).
+
+\bibitem{intro13}
+\bibinfo{author}{Miles, E.~W.}, \bibinfo{author}{Rhee, S.} \&
+  \bibinfo{author}{Davies, D.~R.}
+\newblock \bibinfo{title}{{{T}he molecular basis of substrate channeling}}.
+\newblock \emph{\bibinfo{journal}{J. Biol. Chem.}}
+  \textbf{\bibinfo{volume}{274}}, \bibinfo{pages}{12193--12196}
+  (\bibinfo{year}{1999}).
+
+\bibitem{intro14}
+\bibinfo{author}{Thoden, J.~B.}, \bibinfo{author}{Holden, H.~M.},
+  \bibinfo{author}{Wesenberg, G.}, \bibinfo{author}{Raushel, F.~M.} \&
+  \bibinfo{author}{Rayment, I.}
+\newblock \bibinfo{title}{{{S}tructure of carbamoyl phosphate synthetase: a
+  journey of 96 {A} from substrate to product}}.
+\newblock \emph{\bibinfo{journal}{Biochemistry}} \textbf{\bibinfo{volume}{36}},
+  \bibinfo{pages}{6305--6316} (\bibinfo{year}{1997}).
+
+\bibitem{meth2}
+\bibinfo{author}{Praetorius, F.} \& \bibinfo{author}{Dietz, H.}
+\newblock \bibinfo{title}{{{S}elf-assembly of genetically encoded
+  {D}{N}{A}-protein hybrid nanoscale shapes}}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{355}}
+  (\bibinfo{year}{2017}).
+
+\bibitem{meth1}
+\bibinfo{author}{Elbaz, J.}, \bibinfo{author}{Yin, P.} \&
+  \bibinfo{author}{Voigt, C.~A.}
+\newblock \bibinfo{title}{{{G}enetic encoding of {D}{N}{A} nanostructures and
+  their self-assembly in living bacteria}}.
+\newblock \emph{\bibinfo{journal}{Nat Commun}} \textbf{\bibinfo{volume}{7}},
+  \bibinfo{pages}{11179} (\bibinfo{year}{2016}).
+
+\bibitem{meth3}
+\bibinfo{author}{Han, D.} \emph{et~al.}
+\newblock \bibinfo{title}{{{S}ingle-stranded {D}{N}{A} and {R}{N}{A} origami}}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{358}}
+  (\bibinfo{year}{2017}).
+
+\bibitem{plastic}
+\bibinfo{author}{Kendall, A.}
+\newblock \bibinfo{title}{A life cycle assessment of biopolymer production from
+  material recovery facility residuals}.
+\newblock \emph{\bibinfo{journal}{Resources, Conservation and Recycling}}
+  \textbf{\bibinfo{volume}{61}}, \bibinfo{pages}{69 -- 74}
+  (\bibinfo{year}{2012}).
+\newblock
+  \urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0921344912000092}.
+
+\bibitem{plastprod}
+\bibinfo{author}{Silva, L.~F.} \emph{et~al.}
+\newblock \bibinfo{title}{Poly-3-hydroxybutyrate (p3hb) production by bacteria
+  from xylose, glucose and sugarcane bagasse hydrolysate}.
+\newblock \emph{\bibinfo{journal}{Journal of Industrial Microbiology and
+  Biotechnology}} \textbf{\bibinfo{volume}{31}}, \bibinfo{pages}{245--254}
+  (\bibinfo{year}{2004}).
+\newblock \urlprefix\url{https://doi.org/10.1007/s10295-004-0136-7}.
+
+\end{thebibliography}
