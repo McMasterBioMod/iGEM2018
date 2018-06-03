@@ -1,0 +1,42 @@
+# This is a sample addon script. Type this into the text editor on the sample .blend file. Then click run script.
+# This will add a new function to the blender UI. It will not add a button, however. The script will be accessible from the SPACEBAR menu
+# when you hover over the viewport and click space. Search for "X by one" and click it to move all objects in the viewport by one.
+# Try experimenting with the script to modify the parameters/effects.
+
+bl_info = {
+    "name": "Move X Axis",
+    "category": "Object",
+}
+
+import bpy
+
+
+class ObjectMoveX(bpy.types.Operator):
+    """My Object Moving Script"""      # blender will use this as a tooltip for menu items and buttons.
+    bl_idname = "object.move_x"        # unique identifier for buttons and menu items to reference.
+    bl_label = "X by One"              # display name in the interface.
+    bl_options = {'REGISTER', 'UNDO'}  # enable undo for the operator.
+
+    def execute(self, context):        # execute() is called by blender when running the operator.
+
+        # The original script
+        scene = context.scene
+        for obj in scene.objects:
+            obj.location.x += 1.0
+
+        return {'FINISHED'}            # this lets blender know the operator finished successfully.
+
+def register():
+    bpy.utils.register_class(ObjectMoveX)
+
+
+def unregister():
+    bpy.utils.unregister_class(ObjectMoveX)
+
+
+# This allows you to run the script directly from blenders text editor
+# to test the addon without having to install it.
+if __name__ == "__main__":
+    register()
+    
+# TYPE SPACEBAR WITH THE CURSOR IN THE VIEWPORT AND SEARCH FOR: "X by one"  
