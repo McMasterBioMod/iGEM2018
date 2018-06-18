@@ -1,0 +1,75 @@
+
+""" 
+ROHIT MALYALA JUNE 2018
+
+Brief description of this tool: Outputs a DNA sequence, visual, and relevant parameters 
+                                for the desired ssDNA-TAL origami nanostructure.
+   
+Future tasks:    
+Later on, we will need to add the option to perform these operations in reverse.
+What this means is that we will need to allow a user to input proteinDistance, dihedralAngle, and arcDepth.
+Then the program will output two appropriate TAL distances.
+The dihedral must also be associated somehow with a "likelihood of monomerization problems."
+And of course, it must also output a DNA sequence!
+
+After this basic functionality is added, our next steps are to do a few different things.
+1) It is absolutely vital that this functionality be extended to three or four tal monomers, AT THE VERY LEAST.
+   It is a joke of a program if we leave it at this.
+2) More complex shapes are less important but still would be absolutely excellent!!
+3) An output to a .blend file is pretty much vital
+4) Finally, ALL OF THE WORK DONE HERE WITH THIS PROGRAM MUST BE VALIDATED EMPIRICALLY.
+    
+Have fun!    
+"""
+
+"""
+INITIALIZATION
+--------------
+
+In the future, initialization must provide the following options
+First option:  "What TAL structure primitive would you like to make? Two-TAL monomer, Three-TAL monomer
+                square, triangle, etc." At least four or five options would be nice.
+Second option: "What style of inputs would you like to provide? Do you want to manually input base pair distances
+                to get an output? Or do you want to dictate a enzyme-distance, structure angle, dihedral angle etc, 
+                and then get your sequence from there? --- the two options are "a priori" and "a posteriori".
+                
+For now, however, initialization is just the title sequence.                
+"""
+
+print("DNA ORIGAMI TWO-TAL SEQUENCE STRUCTURE")
+print("-------------------------------------")
+
+"""
+Below is the option to include two distances. The upper distance1 refers to the base pair gap between the two double
+TALs' n-terminal single-TAL. The lower distance2 refers to the base pair gap between the two c-terminal single TALs.
+"""
+
+distance1 = float(input("Input base pair distance 1:"))
+distance2 = float(input("Input base pair distance 2:"))
+
+"""
+Below is the number crunching to get the estimated distance between your two enzymes mounted on the N-terminus
+of each of the N-terminal single-TALs.
+The distance is provided with respect to base pairs, and with respect to an actual nanometre distance.
+Protein angle distance takes into account the chord created by the line bisecting the protein mounting sites on 
+arched nanostructures. Arched nanostructures are created when there is a difference between distance1 and distance2.
+"""
+
+proteinDistance = 21+distance1
+proteinMetreDistance = proteinDistance*6.26964
+proteinAngleDistance = 
+print("-------------------------------------")
+print("The distance between your mounted proteins, assuming both are chimerized to the n-terminal of each double-TAL, is:") 
+print(proteinDistance)
+print(proteinMetreDistance)
+print("-------------------------------------")
+
+"""
+The following is the dihedral angle. It is a description of how far-away the enzymes are in an angular sense. 
+The monomeric TAL structure is fundamentally a line.
+"""
+
+dihedralAngle = ((proteinDistance)%3.5*180)%360
+print("The estimated dihedral angle between your mounted enzymes along the axis of the DNA sequence where the TALs are mounted is provided below. This estimate becomes less meaningful the greater inter-enzyme distance is.")
+print(dihedralAngle)
+
