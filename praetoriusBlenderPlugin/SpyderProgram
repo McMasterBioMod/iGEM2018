@@ -37,15 +37,16 @@ For now, however, initialization is just the title sequence.
 """
 
 print("DNA ORIGAMI TWO-TAL SEQUENCE STRUCTURE")
-print("-------------------------------------")
 
 """
 Below is the option to include two distances. The upper distance1 refers to the base pair gap between the two double
 TALs' n-terminal single-TAL. The lower distance2 refers to the base pair gap between the two c-terminal single TALs.
 """
 
-distance1 = float(input("Input base pair distance 1:"))
-distance2 = float(input("Input base pair distance 2:"))
+distanceNtal_1 = float(input("Input base pair distance between N-terminal TAL 1 and N-terminal TAL 2:"))
+distanceNtal_2 = float(input("Input base pair distance between N-terminal TAL 2 and N-terminal TAL 3:"))
+distanceCtal_1 = float(input("Input base pair distance between C-terminal TAL 1 and C-terminal TAL 2:"))
+distanceCtal_2 = float(input("Input base pair distance between C-terminal TAL 2 and C-terminal TAL 3:"))
 
 """
 Below is the number crunching to get the estimated distance between your two enzymes mounted on the N-terminus
@@ -55,21 +56,73 @@ Protein angle distance takes into account the chord created by the line bisectin
 arched nanostructures. Arched nanostructures are created when there is a difference between distance1 and distance2.
 """
 
-proteinDistance = 21+distance1
-proteinMetreDistance = proteinDistance*6.26964
-proteinAngleDistance = 
-print("-------------------------------------")
-print("The distance between your mounted proteins, assuming both are chimerized to the n-terminal of each double-TAL, is:") 
-print(proteinDistance)
-print(proteinMetreDistance)
-print("-------------------------------------")
+proteinDistance_1_2 = 21+distanceNtal_1
+proteinDistance_2_3 = 21+distanceNtal_2
+proteinLinearDistance_1_2 = proteinDistance_1_2*0.34
+proteinLinearDistance_2_3 = proteinDistance_2_3*0.34
+
+proteinAngleDOC = (proteinLinearDistance_1_2 + proteinLinearDistance_1_2)/distanceNtal_1
+
+print("\n")
+print("The distance between your mounted proteins, assuming both are chimerized to the n-terminal of each double-TAL:") 
+print("linear protein distance, bp")
+print(proteinDistance_1_2)
+print("linear protein distance, nm")
+print(proteinLinearDistance_1_2)
+print("angled protein distance, nm")
+print(proteinAngleDOC)
+print("\n")
 
 """
 The following is the dihedral angle. It is a description of how far-away the enzymes are in an angular sense. 
 The monomeric TAL structure is fundamentally a line.
 """
 
-dihedralAngle = ((proteinDistance)%3.5*180)%360
-print("The estimated dihedral angle between your mounted enzymes along the axis of the DNA sequence where the TALs are mounted is provided below. This estimate becomes less meaningful the greater inter-enzyme distance is.")
-print(dihedralAngle)
+dihedralAngle_1_2 = ((proteinLinearDistance_1_2)%3.5*180)%360
+dihedralAngle_2_3 = ((proteinLinearDistance_2_3)%3.5*180)%360
 
+print("The estimated dihedral angle between your mounted enzymes along the axis of the DNA sequence where the TALs are mounted is provided below. This estimate becomes less meaningful the greater inter-enzyme distance is.")
+print("\n")
+print("Dihedral between TAL 1 and TAL 2 in degrees")
+print(dihedralAngle_1_2)
+print("Dihedral between TAL 2 and TAL 3 in degrees")
+print(dihedralAngle_2_3)
+print("\n")
+
+
+"""
+The following is the calculation to get the degree of curvature.
+The degree of curvature in the arc is calculated from the differential in bp length
+If there is no differential, there is no arc. The monomer is linear
+The degree of curvature is provided here actually as a radius.
+If the radius is small, the degree of curve is high.
+If the radius is very large or infinite, the structure is probably linear.
+You can see here why a visual is so important!!
+
+It is calculated by taking the difference between the bp gap lengths
+and then doing some mild trigonometry to calculate the degree of the curvature
+A 21bp differential assuming a 6nm gap between DNA lines is a 67 degree curve.
+"""
+
+
+"""
+The last output is the DNA sequence.
+tCTGCTCGACGTAACTGACGTATACTGTGACCCGTCCGTTATAACATGAaGTTGCGCAGTTACt
+CCGGTGAATCCACATTTACCATTCCTATACTAGAATGCTCGCGTATTGaTGGACATAGATAGtCC
+GGTCCGTGTTAGCGATGCGGAAAAAGTCGCCAATGAGCCACTTGTAaCACAATTGGGCATtTC
+AGATGATCGCTGTCGTTCCTGGTTGCTTACCAGTACATGTATAACTaCTCAGTCAGTAAAtATAA
+ATGTCGGTTGCCGTCTTTGTCCATTTCGAGATCAATCGATAGTAaGACCTATCACAAGtTCGAC
+GAAACGTTACGCCTCGGACTAACTTCGAGATCTATGAATTATGaACAGAGGGTACCGCAGCCC
+TCCTTAGCATAGCTAGCCCTAAGTGAGCTTCAGGCCATGAGACAGCCAAGGGGTCAGTCGCA
+ATAGTCGGATGAGCGTCAGGGGGTAGTGCGTGTGTGTTATACCAACGAGGTATCGACTGTAG
+ATTCGTACGTGGGAGATTGTCGGAGCCAATCCTCCGATATAATGCCCGGGATCTGAGGCTGG
+ACCGCGGCGCTTAATaCCCAGTGGCTCATtCAATATCGATTCATCTGAATCACCCGATAGGTATT
+AGAGGTGCGCTGTaGGCTTGATAGTTAtCATCAGCGGATCATCTCGATCGAGACAAAGATCGC
+ACAAATTATCACGaAACTCCACAAGAAtAGCTAGTATTTCATCCAATAGGTCGTTGGATACTATC
+GGTACTACTGAaGCCTAAGCCGACAtTGTCACTCACTAATGCAGGCGCCAGCACACTCTATCC
+AGGATGGAAGAaACTTTTTGAAGTCtTTACAGTGATAAAATCTTACAGTGGGGCAATGTAATCA
+GCGCTCTTGGaCCAAATAACGAAAtCGTGAACCGACAACTCTTGA
+
+"""
+
+print("tCTGCTCGACGTAACTGACGTATACTGTGACCCGTCCGTTATAACATGAaGTTGCGCAGTTACtCCGGTGAATCCACATTTACCATTCCTATACTAGAATGCTCGCGTATTGaTGGACATAGATAGtCCGGTCCGTGTTAGCGATGCGGAAAAAGTCGCCAATGAGCCACTTGTAaCACAATTGGGCATtTCAGATGATCGCTGTCGTTCCTGGTTGCTTACCAGTACATGTATAACTaCTCAGTCAGTAAAtATAAATGTCGGTTGCCGTCTTTGTCCATTTCGAGATCAATCGATAGTAaGACCTATCACAAGtTCGACGAAACGTTACGCCTCGGACTAACTTCGAGATCTATGAATTATGaACAGAGGGTACCGCAGCCCTCCTTAGCATAGCTAGCCCTAAGTGAGCTTCAGGCCATGAGACAGCCAAGGGGTCAGTCGCAATAGTCGGATGAGCGTCAGGGGGTAGTGCGTGTGTGTTATACCAACGAGGTATCGACTGTAGATTCGTACGTGGGAGATTGTCGGAGCCAATCCTCCGATATAATGCCCGGGATCTGAGGCTGGACCGCGGCGCTTAATaCCCAGTGGCTCATtCAATATCGATTCATCTGAATCACCCGATAGGTATTAGAGGTGCGCTGTaGGCTTGATAGTTAtCATCAGCGGATCATCTCGATCGAGACAAAGATCGCACAAATTATCACGaAACTCCACAAGAAtAGCTAGTATTTCATCCAATAGGTCGTTGGATACTATCGGTACTACTGAaGCCTAAGCCGACAtTGTCACTCACTAATGCAGGCGCCAGCACACTCTATCCAGGATGGAAGAaACTTTTTGAAGTCtTTACAGTGATAAAATCTTACAGTGGGGCAATGTAATCAGCGCTCTTGGaCCAAATAACGAAAtCGTGAACCGACAACTCTTGA")
